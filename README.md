@@ -4,5 +4,5 @@
 
 - [ ] * Inscription news letter
 - [ ] * Désinscription news letter
-- [ ] * Gérer son abonnement
-- [ ]    * test
+- [ ] * Gérer son abonnement :
+  - test
