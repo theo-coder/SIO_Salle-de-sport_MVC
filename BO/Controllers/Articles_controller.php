@@ -29,7 +29,7 @@
 			
 			$view->menu =  new viewMenu();
 			$view->body =  new viewArticlesAdd();
-            //$view->body->getCategories($pdo->getCategories());
+            $view->body->getCategories($pdo->getCategories());
 
             
             break;
