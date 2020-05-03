@@ -27,10 +27,8 @@ class viewHomeMenu implements viewsComponent_interface {
 	}
 	public function insideHtml()
 	{
-		if($this->message!=null){
-			$str='<center><div class="error-changement"><h2>'.$this->message.'</h2></div></center>';
-		}
-		$str .= '
+		
+		$str = '
 			<header id="carouselHeader" class="carousel slide carousel-fade" data-ride="carousel">
 				<img src="./Tools/imgs/dumbbell.png" id="logoEH" alt="Logo Entre-Haltères" class="img-fluid mx-auto pt-5 d-none d-sm-block"/>
 				<span id="carouselHeaderSpan">Entre Haltères<br/>Musculation</span>
@@ -142,6 +140,9 @@ class viewHomeMenu implements viewsComponent_interface {
 					</ul>
 				</div>
 			</nav>';
+			if($this->message!=null){
+				$str.='<center><div class="error-changement"><h2>'.$this->message.'</h2></div></center>';
+			}
         return $str;
 	}
 }
