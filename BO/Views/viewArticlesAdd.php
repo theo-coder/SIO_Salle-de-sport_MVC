@@ -13,7 +13,7 @@ class viewArticlesAdd implements viewsComponent_interface {
 	public function insideHtml(){
         $str="
         <div class='back'></div>
-                <div class='accountContain'>
+                <div class='accountContainArticles'>
                     <h2 class='accountTitle'>Ajout d'un article</h2>
                     <form method='POST' class='accountForm'>
                         <label for='pseudoInput' class='accountLabel accountLabelPseudo'>Titre :</label>
@@ -35,10 +35,10 @@ class viewArticlesAdd implements viewsComponent_interface {
                             // }
                       
                         $str.="</select>
-                        <textarea id='summernote' name='texte'></textarea>
-                        <a href='index.php' class='btn btn-danger'>Retour</a>
-                        <button name='accountSubmit' type='submit' class='btn btn-primary'>Envoyer</button>
-                        <a class'btn btn-danger' href='index.php?case=FO_Delete'>Supprimer le compte</a>
+                        <div class='summernote'>
+                            <textarea id='summernote' name='texte'></textarea>
+                        </div>
+                        <button name='accountSubmit' type='submit' class='btn btn-primary btnArticles'>Envoyer</button>
                     </form>
                 </div>";
                 if($this->message != null){
