@@ -216,6 +216,38 @@ class PDO_SDS {
         $res = $req->execute();
         return $res;
     }
+    function addArticle($titre,$image,$texte,$user,$categ){
+        $req =  self::$pdo->prepare('INSERT INTO `ARTICLE` (`dateArticle, titre, imageArticle, texteHtml, idUtilisateur, idCategorie`) VALUES (Date(Now()), :titre, :image, :texte, :user, :categ);');
+        $req->bindParam('titre', $titre);
+        $req->bindParam('image', $image);
+        $req->bindParam('texte', $texte);
+        $req->bindParam('user', $user);
+        $req->bindParam('categ', $categ);
+        $res = $req->execute();
+        return $res;
+    }
+    function editArticle($titre,$image,$texte,$user,$categ){
+        $req =  self::$pdo->prepare('UPDATE `ARTICLE` SET `dateArticle`=Date(Now()), `titre`=:titre, `imageArticle`=:image, `texteHtml`=:texte, `idUtilisateur`=:user, `idCategorie`=:categ;');
+        $req->bindParam('titre', $titre);
+        $req->bindParam('image', $image);
+        $req->bindParam('texte', $texte);
+        $req->bindParam('user', $user);
+        $req->bindParam('categ', $categ);
+        $res = $req->execute();
+        return $res;
+    }
+    function getArticles(){
+        $req =  self::$pdo->prepare('SELECT * FROM `ARTICLE`');
+        $res = $req->execute();
+		$res = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $res;
+    }
+    function removeArticle($id){
+        $req =  self::$pdo->prepare('DELETE FROM `ARTICLE` WHERE idArticle = :id');
+        $req->bindParam('id', $id);
+        $res = $req->execute();
+        return $res;
+    }
     function getArticlesById($idCateg){
         $req =  self::$pdo->prepare('SELECT * FROM `ARTICLE` WHERE `idCategorie` = :idCateg');
         $req->bindParam('idCateg', $idCateg);
