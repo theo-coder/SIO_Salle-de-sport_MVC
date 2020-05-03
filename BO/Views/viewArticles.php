@@ -10,6 +10,9 @@ class viewArticles implements viewsComponent_interface {
 	public function getCategories($categories){
         $this->categorie = $categories;
     }
+	public function getArticles($articles){
+        $this->articles = $articles;
+    }
 	public function insideHtml(){
         $str='<div class="back"></div>
             <div class="accountContain">
@@ -17,7 +20,7 @@ class viewArticles implements viewsComponent_interface {
 
                     for($i=0;$i<count($this->categorie);$i++){
                         $str.='<li class="nav-item navCategItem">
-                                    <button type="submit" name="" class="btn btn-primary" href="#">'.$this->categorie[$i]['titre'].'</button>
+                                    <a href="?case=BO_Articles&action=view&view='.$this->categorie[$i]["idCategorie"].'" class="btn btn-primary">'.$this->categorie[$i]['titre'].'</a>
                                 </li>';
                     }
                 $str.='
@@ -36,37 +39,40 @@ class viewArticles implements viewsComponent_interface {
                         </div>
                     ';
                 } else {
-                $str.='<table class="table">
-                    <thead>
-                        <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>';
+                    foreach($this->articles as $article){
+                        print_r($article);
+                        $str.='
+                        <div class="card" style="width: 18rem;">
+                            <img src="./Tools/articles/'.$article['imageArticle'].'" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">'.$article['titre'].'</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card\'s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        ';
+                    }
+
+                    // <tr>
+                    // <th scope="row">1</th>
+                    // <td>Mark</td>
+                    // <td>Otto</td>
+                    // <td>@mdo</td>
+                    // </tr>
+                    // <tr>
+                    // <th scope="row">2</th>
+                    // <td>Jacob</td>
+                    // <td>Thornton</td>
+                    // <td>@fat</td>
+                    // </tr>
+                    // <tr>
+                    // <th scope="row">3</th>
+                    // <td>Larry</td>
+                    // <td>the Bird</td>
+                    // <td>@twitter</td>
+                    // </tr>
+
+                $str.='</div>';
         }
         if($this->message != null){
             $str=$str.'<div class="error"><h2>'.$this->message.'</h2></div>';
