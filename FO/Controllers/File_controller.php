@@ -1,6 +1,5 @@
 <?php 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    print_r($_FILES);
     if (isset($_FILES['file'])) {
         $content_dir = './Tools/uploads/';
         $tmp_file = $_FILES['files']['tmp_name'][0];

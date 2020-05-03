@@ -1,7 +1,7 @@
 <?php
 	include_once("./Views/viewHomeMenu.php");
 	include_once("./Views/viewHome.php");
-	include_once("./Views/viewFooter.php");
+	//include_once("./Views/viewFooter.php");
 	error_reporting(E_ALL);
 	ini_set("display_errors", 1);
 

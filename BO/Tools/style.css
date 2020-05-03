@@ -537,6 +537,9 @@
 .accountInputPseudo{
     grid-column: 2/3;
 }
+#summernote{
+    grid-column: 1/3;
+}
 .btnCateg{
     margin-top: 10px;
 }

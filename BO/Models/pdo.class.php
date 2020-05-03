@@ -216,6 +216,13 @@ class PDO_SDS {
         $res = $req->execute();
         return $res;
     }
+    function getArticlesById($idCateg){
+        $req =  self::$pdo->prepare('SELECT * FROM `ARTICLE` WHERE `idCategorie` = :idCateg');
+        $req->bindParam('idCateg', $idCateg);
+        $res = $req->execute();
+		$res = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $res;
+    }
     function removeComment($id){
         $req =  self::$pdo->prepare('DELETE FROM `COMMENTAIRE_SALLE` WHERE idCommentaire = :id');
         $req->bindParam('id', $id);
