@@ -46,7 +46,6 @@ class viewHome implements viewsComponent_interface {
 							</div>
 							<h2>Moins chère</h2>
 							<p>Notre salle de sport se démarque grâce à son prix très faible et ses nombreux avantages.</p>
-							<p><a class="btn btn-secondary" href="#" role="button">Voir les détails &raquo;</a></p>
 						</div>
 						<div class="col-lg-4">
 							<div class="marketing-round">
@@ -54,7 +53,6 @@ class viewHome implements viewsComponent_interface {
 							</div>
 							<h2>Matériel performant</h2>
 							<p>Notre salle de sport vous garanti un matériel de top qualitée et avec beaucoup de variété pour que vous puissiez pratiquer avec le plus grand plaisir.</p>
-							<p><a class="btn btn-secondary" href="#" role="button">Voir les détails &raquo;</a></p>
 						</div>
 						<div class="col-lg-4">
 							<div class="marketing-round">
@@ -62,7 +60,6 @@ class viewHome implements viewsComponent_interface {
 							</div>
 							<h2>Articles</h2>
 							<p>Nous vous proposons tout une gamme d\'articles gratuits concernant le sport, les différentes méthodes d\'entrainement et la nutrition.</p>
-							<p><a class="btn btn-secondary" href="#" role="button">Voir les détails &raquo;</a></p>
 						</div>
 					</div>
 				</div>
@@ -86,7 +83,6 @@ class viewHome implements viewsComponent_interface {
 										<li>une journée et le tout</li>
 										<li>gratuitement !</li>
 									</ul>
-									<button type="button" class="btn btn-lg btn-block btn-outline-primary">Venez nous découvrir</button>
 								</div>
 							</div>
 							<div class="card mb-4 shadow-sm">
@@ -102,7 +98,6 @@ class viewHome implements viewsComponent_interface {
 										<li>de tout notre matériel au</li>
 										<li>plus bas prix !</li>
 									</ul>
-									<button type="button" class="btn btn-lg btn-block btn-primary">Commencez le travail</button>
 								</div>
 							</div>
 							<div class="card mb-4 shadow-sm">
@@ -118,7 +113,6 @@ class viewHome implements viewsComponent_interface {
 										<li>conseil de nos experts</li>
 										<li>au plus bas prix !</li>
 									</ul>
-									<button type="button" class="btn btn-lg btn-block btn-primary">Écoutez nos conseils</button>
 								</div>
 							</div>
 						</div>
