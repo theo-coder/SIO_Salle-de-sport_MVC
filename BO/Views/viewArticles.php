@@ -47,7 +47,8 @@ class viewArticles implements viewsComponent_interface {
                             <div class="card-body">
                                 <h5 class="card-title">'.$article['titre'].'</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card\'s content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-primary">Modifier</a>
+                                <a href="#" class="btn btn-danger">Supprimer</a>
                             </div>
                         </div>
                         ';
@@ -72,7 +73,10 @@ class viewArticles implements viewsComponent_interface {
                     // <td>@twitter</td>
                     // </tr>
 
-                $str.='</div>';
+                    
+                $str.='<br/>
+                <a class="btn btn-link" href="?case=BO_Articles&action=add" name="addCateg">Nouvel article</a>
+                </div>';
         }
         if($this->message != null){
             $str=$str.'<div class="error"><h2>'.$this->message.'</h2></div>';
