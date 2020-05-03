@@ -4,48 +4,48 @@
 
 ### FO 1
 
-- [ ] Inscription à la newsletter
-- [ ] Désinscription de la newsletter
+- [x] Inscription à la newsletter
+- [x] Désinscription de la newsletter
 
 ### BO 1
 
-- [ ] Voir la liste des inscrits
-- [ ] Formulaire pour envoyer un mail aux inscrits
+- [x] Voir la liste des inscrits
+- [x] Formulaire pour envoyer un mail aux inscrits
 
 ## Etape 2 : Les commentaires
 
 ### FO 2
 
-- [ ] Rédiger un commentaire sous la forme (nom, date, commentaire)
-- [ ] Consulter les commentaires
+- [x] Rédiger un commentaire sous la forme (nom, date, commentaire)
+- [x] Consulter les commentaires
 
 ### BO 2
 
-- [ ] Consulter les commentaires
-- [ ] Supprimer les commentaires
+- [x] Consulter les commentaires
+- [x] Supprimer les commentaires
 
 ## Etape 3 : Les inscriptions
 
 ### FO 3
 
-- [ ] Permettre aux utilisateurs non-connectés de s'inscrire
-- [ ] Permettre de se connecter
-- [ ] Modification des informations
-- [ ] Supprimer  son compte
+- [x] Permettre aux utilisateurs non-connectés de s'inscrire
+- [x] Permettre de se connecter
+- [x] Modification des informations
+- [x] Supprimer  son compte
 
 ### BO 3
 
-- [ ] Consulter la liste des inscrits
+- [x] Consulter la liste des inscrits
 
 ## Etape 4 : L'administration du BO
 
 ### BO 4
 
-- [ ] Les utilisateurs du BO doivent se connecter
-- [ ] Il y a deux types d'utilisateurs du BO :
+- [x] Les utilisateurs du BO doivent se connecter
+- [x] Il y a deux types d'utilisateurs du BO :
   - Administrateur
   - Utilisateur
-- [ ] Les administrateurs du BO peuvent gérer les comptes du BO
+- [x] Les administrateurs du BO peuvent gérer les comptes du BO
   - Ajouter, supprimer, modifier les autres comptes
   - Il doit toujours rester au moins un utilisateur administrateur
 

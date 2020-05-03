@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "connectionTimeout": 10,
+            "database": "DB_SDS",
+            "dialect": "MariaDB",
+            "name": "DB_SDS",
+            "password": "azerty",
+            "port": 3306,
+            "server": "localhost",
+            "username": "root"
+        }
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#4d2e94",
+        "titleBar.activeBackground": "#7842f5",
+        "titleBar.activeForeground": "#FFF"
+    }
+}

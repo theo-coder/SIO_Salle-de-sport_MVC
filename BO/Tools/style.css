@@ -1,0 +1,595 @@
+#logoEH {
+    position: absolute;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 5vh;
+    width: 200px;
+}
+#carouselHeader .carousel-item{
+    height: 65vh;
+}
+.marketing-round{
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 0px #007bff;
+}
+.marketing-round img{
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#carouselHeaderSpan{
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 30vh;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+#carouselHeader .carousel-item img{
+    position: absolute;
+    object-fit:cover;
+    margin-top: auto;
+    margin-bottom: auto;
+    bottom: 0;
+    top: 0;
+    min-height: 65vh;
+}
+.carousel-indicators > li {
+    z-index: 5!important;
+}
+.navbar{
+    z-index: 5!important;
+}
+.nav-link {
+    transition: opacity .3s;
+    opacity: .67!important;
+}
+.nav-link:hover {
+    transition: opacity .3s;
+    opacity: 1!important;
+}
+#userAdd::after{
+    content: '';
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    vertical-align: middle;
+    margin: -2px 0 0 7px;
+    background: url("./imgs/single-neutral-useradd.png") center center / contain;
+}
+#userConnect::after{
+    content: '';
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    vertical-align: middle;
+    margin: -2px 0 0 7px;
+    background: url("./imgs/login.png") center center / contain;
+}
+.navBar-home {
+    margin-bottom: 50px;
+}
+#navBar a {
+    color:white;
+}
+.back{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url("./imgs/back.jpg");
+    background-size: cover;
+}
+.error{
+    position: relative;
+    z-index: 3;
+    background-color: rgba(240,255,255,.6)!important;
+    width: 75%;
+    margin-top: 20px;
+    padding-top: 20px;
+    height: 75px;
+    box-shadow: 0px 0px 15px .01px #656565;
+}
+.contain {
+    position: relative;
+    z-index: 3;
+    background-color: rgba(240,255,255,.6)!important;
+    width: 75%;
+    margin-top: 25vh;
+    padding-top: 20px;
+    height: 37vh;
+    box-shadow: 0px 0px 15px .01px #656565;
+}
+.pricing{
+    background: #212122;
+}
+.pricing-header{
+    color: white;
+}
+.contain h2{
+    padding: 0 10px;
+}
+.mail-input{
+    display: flex;
+    height: 100%;
+    margin-top: -50px;
+    align-items: center;
+    justify-content: center;
+}
+.mail-input form {
+    width: 75%;
+}
+.mail-input .mail{
+    width: 100%;
+    border-radius: 5px!important;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.mail-input .name{
+    width: 49%;
+    border-radius: 5px!important;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.mail-input .firstName{
+    width: 49%;
+    border-radius: 5px!important;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.registration-input{
+    display: flex;
+    height: 100%;
+    margin-top: -20px;
+    align-items: center;
+    justify-content: center;
+}
+.registration-input form {
+    width: 60%;
+}
+.registration-input .pseudo{
+    width: 100%;
+    border-radius: 5px!important;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.registration-input .email{
+    width: 100%;
+    border-radius: 5px!important;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.registration-input .password{
+    width: 49%;
+    border-radius: 5px!important;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.registration-input .password-verif{
+    width: 49%;
+    border-radius: 5px!important;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+#BO_title{
+    color: red;
+    font-weight: 900;
+    font-size: 150px;
+}
+#BO_back{
+    background-image: url('./imgs/BO_back.jpg');
+    height: 100%;
+    margin: auto;
+}
+
+/*
+*   MODALS
+*/
+
+/* The Modal (background) */
+.mymodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9; /* Sit on top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+  }
+  
+  /* Modal Content */
+  .mymodal-content {
+    right: 0;
+    top: 10vh;
+    background: black;
+    opacity: .5;
+    display: none;
+    z-index: 10;
+    height: 750px;
+    width: 350px;
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+  }
+  .mymodal-container{
+    border-radius: 25px 0 0 25px;
+    -moz-box-shadow: 0px 0px 5px 1px #656565;
+    -webkit-box-shadow: 0px 0px 5px 1px #656565;
+    -o-box-shadow: 0px 0px 5px 1px #656565;
+    box-shadow: 0px 0px 5px 1px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=NaN, Strength=5);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    top: 10vh;
+    background-color: whitesmoke;
+    width: 350px;
+    height: 750px;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+  }
+  /* The Close Button */
+  .close {
+    position: absolute;
+    color: grey;
+    right: 5px;
+    /*float: right;*/
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.input-hidden{
+    opacity: .0;
+    width: 100%;
+    height: 100%;
+}
+.profil-picture{
+    margin: 20px 0 30px 0;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+    -moz-box-shadow: 0px 0px 15px 0px #656565;
+    -webkit-box-shadow: 0px 0px 15px 0px #656565;
+    -o-box-shadow: 0px 0px 15px 0px #656565;
+    box-shadow: 0px 0px 15px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=NaN, Strength=15);
+}
+.validateText{
+    position: absolute;
+    left: 256px;
+    top: 90px;
+    background: transparent;
+    margin: auto 0;
+    font-size: 10px;
+}
+.validate{
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 100px;
+    background: transparent;
+    margin: auto 0;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    font-size: 10px;
+    color: cornflowerblue;
+    text-decoration: underline;
+}
+.validate:hover{
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+.edit-profil{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+}
+.circle-hover{
+    opacity: 0;
+    background-color: black;
+    position: relative;
+    border-radius: 50%;
+    margin-top: -170px;
+    width: 140px;
+    height: 140px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 11;
+}
+.circle-hover:hover{
+    animation-name: appear;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+.mymodal-body-content{
+    display: block;
+    margin: 10px 0;
+}
+.mymodal-body-content >a{
+    display: block;
+    color: black!important;
+    width: auto;
+    text-decoration: none!important;
+}
+#myBtn::before{
+    content: '';
+    margin: 5px 0 0 -20px;
+    display: inline-block;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: url("./imgs/edit-profil-picture.png") center center / contain;
+}
+.mymodal-footer-content{
+    display: block;
+    padding-top: 180px;
+}
+.mymodal-body-content > a:hover::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    margin: 4px 0 0 5px;
+    background: url("./imgs/edit.png") center center / contain;
+}
+#details{
+    display: block;
+    padding-top: -5px;
+    font-size: 10px;
+    color: cornflowerblue!important;
+    text-decoration: underline;
+}
+#pseudo{
+    position: relative;
+    display: block;
+    margin: 40px 0 0 0;
+}
+#pseudo-input{
+    margin: 0 0 40px 0;
+    display: none;
+}
+#pseudo-input > input{
+    border-radius: 5px;
+    border: 1px solid lightgrey!important;
+}
+#email{
+    margin: 50px 0 0 0;
+}
+#email-input{
+    position: relative;
+    margin: 44px 0 0 0;
+    display: none;
+}
+#email-input > input{
+    border-radius: 5px;
+    border: 1px solid lightgrey!important;
+}
+#newsletter{
+    display: flex;
+    margin: 50px 0 0 0;
+    justify-content: center;
+}
+#newsletter > * + *{
+    padding-left: 20px;
+}
+#pseudo-input > * + *{
+    margin-left: 20px;
+}
+#email-input > * + *{
+    margin-left: 20px;
+}
+#email-button{
+    border: transparent;
+    border-radius: 25px;
+    font-weight: 700;
+    padding: 2px 15px;
+    background: #5E9A78;
+}
+#pseudo-button{
+    border: transparent;
+    border-radius: 25px;
+    font-weight: 700;
+    padding: 2px 15px;
+    background: #5E9A78;
+}
+#newsletterButton{
+    border: transparent;
+    border-radius: 25px;
+    font-weight: 700;
+    padding: 2px 15px;
+}
+#newsletterButton:hover, #pseudo-button:hover, #email-button:hover{
+    filter: brightness(1.8);
+}
+#admin-button{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: black!important;
+}
+#admin-button:hover{
+    text-decoration: none;
+}
+#admin-button:hover::after{
+    content: '';
+    margin: -5px 0 0 60px;
+    display: inline-block;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: url("./imgs/pannel-admin.png") center center / contain;
+}
+#deco-button{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: red!important;
+}
+#deco-button:hover{
+    text-decoration: none;
+}
+#deco-button:hover::after{
+    content: '';
+    margin: -5px 0 0 60px;
+    display: inline-block;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: url("./imgs/logout.png") center center / contain;
+}
+#abonnement-link > a{
+    padding-top: 50px;
+    display: block;
+    color: black!important;
+    width: auto;
+    text-decoration: none!important;
+}
+.error-changement{
+    color: red;
+}
+.accountContain{
+    position: relative;
+    z-index: 3;
+    background-color: rgba(240,255,255,.6)!important;
+    width: 75%;
+    margin-top: 25vh;
+    padding: 20px 0;
+    height: auto;
+    box-shadow: 0px 0px 15px .01px #656565;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+}
+.accountForm{
+    margin: 0 100px;
+    margin-top: 5px;
+    display: grid;
+    grid-column: repeat(2, 1fr);
+    gap: 10px;
+}
+.accountLabelPass{
+    grid-column: 1/3;
+}
+.accountForm > label{
+    color: black;
+    font-weight: 700;
+}
+.btns{
+    margin: 0 0 10px 0;
+}
+.BO-back{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-image: url('./imgs/BO_back.jpg');
+}
+.accountLabelPseudo{
+    grid-column: 1/2;
+}
+.accountInputPseudo{
+    grid-column: 2/3;
+}
+  /* Add Animation */
+  @-webkit-keyframes slideIn {
+    from {right: -350px; opacity: 0} 
+    to {right: 0; opacity: 1}
+  }
+  @keyframes slideIn {
+    from {right: -350px; opacity: 0}
+    to {right: 0; opacity: 1}
+  }
+  @-webkit-keyframes appear {
+    from {opacity: 0;} 
+    to {opacity: .5;}
+  }
+  @keyframes appear {
+    from {opacity: 0;} 
+    to {opacity: .5;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;display: none;} 
+    to {opacity: 1;display: block;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+
+/*
+*   Media Queries
+*/
+
+@media screen and (max-width: 575px) {
+    #carouselHeaderSpan{
+        display: none;
+    }
+    .sticky-top{
+        position: relative!important;
+        margin: 0 0 30px 0!important;
+    }
+}
+@media screen and (max-width: 523px) {
+    .contain {
+        height: 40vh;
+    }
+}
+@media screen and (max-width: 1160px) {
+    #BO_title{
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 490px) {
+    #BO_title, #BO_back{
+        display: none;
+    }
+}
