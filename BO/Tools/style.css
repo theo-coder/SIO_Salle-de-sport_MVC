@@ -537,6 +537,18 @@
 .accountInputPseudo{
     grid-column: 2/3;
 }
+.btnCateg{
+    margin-top: 10px;
+}
+.categNameInput{
+    width: 75%;
+}
+.navCateg{
+    margin-bottom: 10px;
+}
+.navCategItem{
+    margin-right: 10px;
+}
   /* Add Animation */
   @-webkit-keyframes slideIn {
     from {right: -350px; opacity: 0} 

@@ -204,6 +204,18 @@ class PDO_SDS {
 		$res = $req->fetchAll(PDO::FETCH_ASSOC);
         return $res;
     }
+    function getCategories(){
+        $req =  self::$pdo->prepare('SELECT * FROM `CATEGORIE`');
+        $res = $req->execute();
+		$res = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $res;
+    }
+    function addCateg($titre){
+        $req =  self::$pdo->prepare('INSERT INTO `CATEGORIE` (`titre`) VALUES (:titre);');
+        $req->bindParam('titre', $titre);
+        $res = $req->execute();
+        return $res;
+    }
     function removeComment($id){
         $req =  self::$pdo->prepare('DELETE FROM `COMMENTAIRE_SALLE` WHERE idCommentaire = :id');
         $req->bindParam('id', $id);

@@ -33,6 +33,9 @@ switch($case){
 	case "BO_Commentaires":
 		include "./Controllers/Commentaires_controller.php";
 		break;
+	case "BO_Articles":
+		include "./Controllers/Articles_controller.php";
+		break;
 	case "BO_Registration":
 		if(Session::isLogged()){
 			header('Location:./index.php');

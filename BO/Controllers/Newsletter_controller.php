@@ -7,9 +7,8 @@
 	// ini_set("display_errors", 1);
 	
 	switch($action) {
-
+        
 		case "view" :
-			
 			$view->menu =  new viewMenu();
 			$view->body =  new viewNewsletter();
 			

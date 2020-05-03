@@ -37,21 +37,22 @@ class viewNewsletter implements viewsComponent_interface {
 	public function insideHtml(){
         $str="<div class='back'></div>
         
-        <form method='post'>
+        
             <div class='accountContain'>
+            <form method='post'>
                 <h2 class='accountTitle'>Newsletter</h2>
                 <div class='btns'>
                     <button type='submit' name='sendButton' class='btn btn-primary'>Envoyer un message</button>
-                    <button class='btn btn-secondary' data-toggle='modal' data-target='#modalInscrits' >Liste des inscrits</button>
+                    <a class='text-white btn btn-secondary' data-toggle='modal' data-target='#modalInscrits' >Liste des inscrits</a>
                 </div>
                 <div>
-                        <textarea rows='10' cols='75' name='content'>
-                        </textarea>
+                    <textarea rows='10' cols='75' name='content'>
+                    </textarea>
                 </div>
+                
+                </form>
             </div>
-        </form>
         
-
         <!-- Modal -->
         <div class='modal fade' id='modalInscrits' tabindex='-1' role='dialog' aria-labelledby='modalInscritsLabel' aria-hidden='true'>
         <div class='modal-dialog' role='document'>

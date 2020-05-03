@@ -77,7 +77,7 @@ class viewHomeMenu implements viewsComponent_interface {
 							<a class="nav-link" href="index.php?case=BO_Commentaires&action=view">Commentaires</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Articles</a>
+							<a class="nav-link" href="index.php?case=BO_Articles&action=view">Articles</a>
 						</li>
 					</ul>
 				</div>

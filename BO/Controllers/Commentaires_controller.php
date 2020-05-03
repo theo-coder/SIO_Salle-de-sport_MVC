@@ -15,7 +15,6 @@
                 $pdo->removeComment($_REQUEST['idCommentaire']);
                 header('Refresh:0');
             }
-			
         	break;
 		default :
 			$view->menu = new viewMenu();
