@@ -53,7 +53,7 @@
 
 ### FO 5
 
-- [ ] Les utilisateurs peuvent consulter les articles rédigés en BO
+- [x] Les utilisateurs peuvent consulter les articles rédigés en BO
 
 ### BO 5
 
@@ -69,9 +69,9 @@
 
 ### BO 6
 
-- [ ] Consulter la liste des abonnés avec 4 filtrages possibles :
+- [x] Consulter la liste des abonnés avec 4 filtrages possibles :
   - Abonnement valide
   - Abonnement fini
   - Inscrit sans abonnement
   - Tous les abonnés
-- [ ] Indiquer si une inscription est valide (le paiement a été reçu, et l'inscription est valide jusqu'à une date donnée)
+- [x] Indiquer si une inscription est valide (le paiement a été reçu, et l'inscription est valide jusqu'à une date donnée)
