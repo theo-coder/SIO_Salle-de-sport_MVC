@@ -44,6 +44,10 @@ switch($case){
 		include_once("./Views/viewHome.php");
 		$view->body = new viewHome();
 		break;
+	case "FO_DeleteAbo":
+		$pdo->deleteAbonnement(Session::getUserID()[0]);
+		header('Location:./index.php');
+		break;
 	case "FO_Abonnement":
 		include "./Controllers/Abonnement_controller.php";
 		break;

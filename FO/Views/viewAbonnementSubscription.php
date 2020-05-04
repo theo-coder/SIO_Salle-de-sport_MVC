@@ -50,7 +50,7 @@ class viewAbonnementSubscription implements viewsComponent_interface {
                         <h5 class='card-title'>".$type."</h5>
                         <p class='card-text'>".$description."</p>
                         <form method='post'>
-                            <select class='custom-select custom-select-lg mb-3'>
+                            <select name='selection' class='custom-select custom-select-lg mb-3'>
                                 <option selected hidden>Durée</option>
                                 <option value='1'>Un mois</option>
                                 <option value='2'>Six mois</option>

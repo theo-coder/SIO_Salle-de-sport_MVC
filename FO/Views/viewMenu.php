@@ -36,6 +36,9 @@ class viewMenu implements viewsComponent_interface {
                     <li class="nav-item">
                         <a class="nav-link" href="#">Articles</a>
                     </li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.php?case=FO_Abonnement&action=subscribe">Abonnement</a>
+					</li>
                 </ul>
             </div>
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
@@ -46,7 +49,7 @@ class viewMenu implements viewsComponent_interface {
                             ?>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Mon compte</a>
+                                <a class="nav-link" href="index.php?case=FO_Account&action=view">Mon compte</a>
                             </li>
 
                             <?php

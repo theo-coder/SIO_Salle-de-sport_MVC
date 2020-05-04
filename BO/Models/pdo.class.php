@@ -254,6 +254,14 @@ class PDO_SDS {
         $res = $req->execute();
         return $res;
     }
+    function addAbonnement($paiement, $dateFin, $type){
+        $req =  self::$pdo->prepare('INSERT INTO `ABONNEMENT` (etatPaiement, dateDebut, dateFin, typeAbonnement) VALUES (:paiement, Date(Now()), :dateFin, :type;');
+        $req->bindParam('paiement', $paiement);
+        $req->bindParam('dateFin', $dateFin); //Now()+INTERVAL 3 MONTH
+        $req->bindParam('type', $type); 
+        $res = $req->execute();
+        return $res;
+    }
     function getArticles(){
         $req =  self::$pdo->prepare('SELECT * FROM `ARTICLE`');
         $res = $req->execute();
