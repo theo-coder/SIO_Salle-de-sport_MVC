@@ -217,7 +217,7 @@ class PDO_SDS {
         return $res;
     }
     function addArticle($titre,$image,$texte,$user,$categ){
-        $req =  self::$pdo->prepare('INSERT INTO `ARTICLE` (`dateArticle, titre, imageArticle, texteHtml, idUtilisateur, idCategorie`) VALUES (Date(Now()), :titre, :image, :texte, :user, :categ);');
+        $req =  self::$pdo->prepare('INSERT INTO `ARTICLE` (dateArticle, titre, imageArticle, texteHtml, idUtilisateur, idCategorie) VALUES (Date(Now()), :titre, :image, :texte, :user, :categ);');
         $req->bindParam('titre', $titre);
         $req->bindParam('image', $image);
         $req->bindParam('texte', $texte);

@@ -39,17 +39,19 @@ class viewArticles implements viewsComponent_interface {
                         </div>
                     ';
                 } else {
+                    $str .= '<div class="row">';
                     foreach($this->articles as $article){
-                        print_r($article);
                         $str.='
-                        <div class="card" style="width: 18rem;">
-                            <img src="./Tools/articles/'.$article['imageArticle'].'" class="card-img-top">
+                        <div class="col-lg-6">
+                        <div class="card" style="width: 100%;">
+                            <img src="./Tools/articles/'.$article['imageArticle'].'" style="max-height: 180px; object-fit: cover;" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">'.$article['titre'].'</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card\'s content.</p>
                                 <a href="#" class="btn btn-primary">Modifier</a>
                                 <a href="#" class="btn btn-danger">Supprimer</a>
                             </div>
+                        </div>
                         </div>
                         ';
                     }
@@ -74,7 +76,7 @@ class viewArticles implements viewsComponent_interface {
                     // </tr>
 
                     
-                $str.='<br/>
+                $str.='</div><br/>
                 <a class="btn btn-link" href="?case=BO_Articles&action=add" name="addCateg">Nouvel article</a>
                 </div>';
         }
