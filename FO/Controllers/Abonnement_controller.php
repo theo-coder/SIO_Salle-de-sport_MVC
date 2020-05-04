@@ -13,6 +13,32 @@
 			include_once("./Views/viewAbonnementSubscription.php");
 			$view->menu = new viewMenu();
             $view->body =  new viewAbonnementSubscription();
+
+            if(isset($_REQUEST['payement'])){
+                
+                if(trim($_REQUEST['selection'])!="Durée"){
+                    switch($_REQUEST['selection']){
+                        case 1:
+                            //un mois
+                            $id = Session::getUserID()[0];
+                            $payement = 'P';
+                            
+                        break;
+                        case 2:
+                            //six mois
+                            $id = Session::getUserID()[0];
+                            $payement = 'P';
+                        break;
+                        case 3:
+                            //un an
+                            $id = Session::getUserID()[0];
+                            $payement = 'P';
+                        break;
+                    }
+                } else {
+                    $view->body->setMessage("Veuillez choisir une durée");
+                }
+            }
             break;
 		// case "subscription" :
 			// include_once("./Views/viewNewsletterSubscribe.php");
