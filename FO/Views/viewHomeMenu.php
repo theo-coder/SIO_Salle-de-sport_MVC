@@ -75,6 +75,9 @@ class viewHomeMenu implements viewsComponent_interface {
 						$str.='<li class="nav-item">
 							<a class="nav-link" href="#">Articles</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.php?case=FO_Abonnement&action=subscribe">Abonnement</a>
+						</li>
 					</ul>
 				</div>
 			';
