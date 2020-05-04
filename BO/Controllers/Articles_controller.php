@@ -244,7 +244,7 @@
 
                 }else $view->body->setMessage("Des champs sont manquants");
 
-				header('Location:?case=BO_Articles&action=view&view=1');
+				header('Location:?case=BO_Articles&action=view&view='.$_GET['view']);
 			}
 
             
@@ -261,7 +261,7 @@
             unlink("./Tools/articles/".$pdo->getArticleData($_GET['article'])[0]['imageArticle']);
             $pdo->removeArticle($_GET['article']);
 
-            header('Location:?case=BO_Articles&action=view&view=1');
+            header('Location:?case=BO_Articles&action=view&view='.$_GET['view']);
             
         break;
 

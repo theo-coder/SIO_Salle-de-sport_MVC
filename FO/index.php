@@ -51,6 +51,9 @@ switch($case){
 	case "FO_Abonnement":
 		include "./Controllers/Abonnement_controller.php";
 		break;
+	case "FO_Articles":
+		include "./Controllers/Articles_controller.php";
+		break;
 	case "FO_Account":
 		include "./Controllers/Account_controller.php";
 		break;

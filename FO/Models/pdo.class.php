@@ -83,7 +83,19 @@ class PDO_SDS {
         $res = $req->execute();
         return $res;
     }
-
+    function getCategories(){
+        $req =  self::$pdo->prepare('SELECT * FROM `CATEGORIE`');
+        $res = $req->execute();
+		$res = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $res;
+    }
+    function getArticlesById($idCateg){
+        $req =  self::$pdo->prepare('SELECT * FROM `ARTICLE` WHERE `idCategorie` = :idCateg');
+        $req->bindParam('idCateg', $idCateg);
+        $res = $req->execute();
+		$res = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $res;
+    }
     function addRegistration($mailUtilisateur, $pseudo, $motDePasse){
         $req =  self::$pdo->prepare('INSERT INTO `UTILISATEUR` (`idUtilisateur`,`typeUtilisateur`,`mailUtilisateur`,`pseudo`,`motDePasse`) VALUES (NULL, 0, :mailUtilisateur, :pseudo, :motDePasse);');
         $req->bindParam('mailUtilisateur',$mailUtilisateur);
