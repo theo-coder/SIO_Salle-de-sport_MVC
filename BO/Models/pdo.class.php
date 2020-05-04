@@ -226,6 +226,12 @@ class PDO_SDS {
         $res = $req->execute();
         return $res;
     }
+    function getAllAbonnements(){
+        $req =  self::$pdo->prepare('SELECT * FROM `ABONNEMENT`');
+        $res = $req->execute();
+		$res = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $res;
+    }
     function editArticle($titre,$image,$texte,$user,$categ){
         $req =  self::$pdo->prepare('UPDATE `ARTICLE` SET `dateArticle`=Date(Now()), `titre`=:titre, `imageArticle`=:image, `texteHtml`=:texte, `idUtilisateur`=:user, `idCategorie`=:categ;');
         $req->bindParam('titre', $titre);
