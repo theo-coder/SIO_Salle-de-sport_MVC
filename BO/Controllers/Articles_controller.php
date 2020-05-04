@@ -14,7 +14,13 @@
 			$view->menu =  new viewMenu();
 			$view->body =  new viewArticles();
             $view->body->getCategories($pdo->getCategories());
-            $view->body->getArticles($pdo->getArticlesById($_GET["view"]));
+
+            if(isset($_GET['view']))
+            {
+                $view->body->getArticles($pdo->getArticlesById($_GET["view"]));
+            }else{
+                $view->body->getArticles($pdo->getArticles());
+            }
 
             if(isset($_REQUEST["categSubmit"])){
                 if($_REQUEST["categName"]){

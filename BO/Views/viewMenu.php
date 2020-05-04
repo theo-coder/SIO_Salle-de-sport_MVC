@@ -47,7 +47,7 @@ class viewMenu implements viewsComponent_interface {
 							<a class="nav-link" href="index.php?case=BO_Abonnements&action=view">Abonnements</a>
 						</li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?case=BO_Articles&action=view&view=1">Articles</a>
+                        <a class="nav-link" href="index.php?case=BO_Articles&action=view">Articles</a>
                     </li>
                 </ul>
             </div>

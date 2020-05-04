@@ -59,7 +59,11 @@ class viewArticles implements viewsComponent_interface {
                     }
 
                     
-                $str.='</div><br/>
+                $str.='</div><br/>';
+
+                if(isset($_GET['view']))
+                {
+                ?>
                 <ul class="nav justify-content-center navCateg">
                     <li class="nav-item navCategItem">
                         <a class="btn btn-link" href="?case=BO_Articles&action=add">Nouvel article</a>
@@ -71,6 +75,7 @@ class viewArticles implements viewsComponent_interface {
                         <a class="btn btn-link" onclick="return(confirm(\'Etes-vous sûr(e) ?\nCela va supprimer tous les articles de la rubrique!!!\'));" href="index.php?case=BO_Articles&action=view&view='.$_GET['view'].'&remove">Supprimer la rubrique</a>
                     </li>
                 </ul>
+                
                 </div>
                 <script>
                 function editCategory() {
@@ -83,10 +88,8 @@ class viewArticles implements viewsComponent_interface {
                 }
                 }
                 </script>
-                
-                
-                
-                ';
+                <?php
+                }
         }
         if($this->message != null){
             $str=$str.'<div class="error"><h2>'.$this->message.'</h2></div>';
