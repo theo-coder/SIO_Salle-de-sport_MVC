@@ -53,7 +53,7 @@
                 // Un gros check bien dégueulasse parce que flemme
                 if($titre && $categorie && $texte)
                 {
-                    if (isset($image))
+                    if (is_uploaded_file($image['tmp_name']))
                     {
                         $content_dir = './Tools/articles/';
                         $tmp_file = $image['tmp_name'];
