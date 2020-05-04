@@ -1,6 +1,7 @@
 <?php 
 
 class viewConnexion implements viewsComponent_interface {
+    private $message = null;
     public function __construct() {  
     }
 	public function setMessage($message){

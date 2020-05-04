@@ -5,7 +5,7 @@
 
 		case "subscribe" :
 			$view->menu = new viewMenu();
-            if($pdo->getAbonnement(Session::getUserID()[0])){
+            if($pdo->getUserAbonnement(Session::getUserID()[0])){
                 include_once("./Views/viewCurrentAbonnement.php");
                 $view->body = new viewCurrentAbonnement();
                 $view->body->userAbo($pdo->getUserAbonnement(Session::getUserID()[0]));
@@ -56,42 +56,6 @@
                 }
             }
             break;
-		// case "subscription" :
-			// include_once("./Views/viewNewsletterSubscribe.php");
-			// $view->menu = new viewMenu();
-			// $view->body =  new viewNewsletterSubscribe();
-			// if(($_REQUEST["mail"]!="") && ($_REQUEST["name"]!="") && ($_REQUEST["firstName"]!="") && ($_REQUEST["gender"]!="")) {
-			// 	if($pdo->addSubscription($_REQUEST["mail"], $_REQUEST["name"], $_REQUEST["firstName"], $_REQUEST["gender"])) {
-			// 		$view->body->setMessage("Inscription réussie");
-			// 	} else {
-			// 		$view->body->setMessage("Erreur 500");
-			// 	}
-			// }else{
-			// 	$view->body->setMessage("Veuillez tout remplir !");
-			// }
-		// break;
-
-		// case "unsubscribe" :
-		// 	include_once("./Views/viewAbonnementUnsubscribe.php");
-		// 	$view->menu = new viewMenu();
-		// 	$view->body =  new viewAbonnementUnsubscribe();
-        // break;
-        
-		// case "unsubscription" :
-		// 	include_once("./Views/viewNewsletterUnsubscribe.php");
-		// 	$view->menu = new viewMenu();
-        //     $view->body =  new viewNewsletterUnsubscribe();
-            
-		// 	if($_REQUEST["mail"]!="") {
-		// 		if($pdo->removeSubscription($_REQUEST["mail"])){
-		// 			$view->body->setMessage("Désinscription réussie");
-		// 		}else{
-		// 			$view->body->setMessage("Erreur 500");
-		// 		}
-		// 	}else{
-		// 		$view->body->setMessage("Mail non saisi !");
-		// 	}		
-		// break;
 		
 		default :
 			$view->menu = new viewMenu();
