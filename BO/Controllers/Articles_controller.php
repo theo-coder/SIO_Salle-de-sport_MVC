@@ -55,7 +55,7 @@
                 {
                     if (is_uploaded_file($image['tmp_name']))
                     {
-                        $content_dir = './Tools/articles/';
+                        $content_dir = '../FO/Tools/articles/';
                         $tmp_file = $image['tmp_name'];
                         if(!is_uploaded_file($tmp_file)){
                             echo("Le fichier est introuvable");
@@ -111,9 +111,9 @@
                     {
                         if($pdo->getArticleData($_GET['article'])[0]['imageArticle'] != "")
                         {
-                            unlink("./Tools/articles/".$pdo->getArticleData($_GET['article'])[0]['imageArticle']);
+                            unlink("../FO/Tools/articles/".$pdo->getArticleData($_GET['article'])[0]['imageArticle']);
                         }
-                        $content_dir = './Tools/articles/';
+                        $content_dir = '../FO/Tools/articles/';
                         $tmp_file = $image['tmp_name'];
                         $type_file = $image['type'];
                         if( !strstr($type_file, 'jpg') && !strstr($type_file, 'jpeg') && !strstr($type_file, 'bmp') && !strstr($type_file, 'gif') && !strstr($type_file, 'png')){
@@ -167,9 +167,9 @@
                     {
                         if($pdo->getArticleData($_GET['article'])[0]['imageArticle'] != "")
                         {
-                            unlink("./Tools/articles/".$pdo->getArticleData($_GET['article'])[0]['imageArticle']);
+                            unlink("../FO/articles/".$pdo->getArticleData($_GET['article'])[0]['imageArticle']);
                         }
-                        $content_dir = './Tools/articles/';
+                        $content_dir = '../FO/Tools/articles/';
                         $tmp_file = $image['tmp_name'];
                         $type_file = $image['type'];
                         if( !strstr($type_file, 'jpg') && !strstr($type_file, 'jpeg') && !strstr($type_file, 'bmp') && !strstr($type_file, 'gif') && !strstr($type_file, 'png')){
@@ -223,9 +223,9 @@
                     {
                         if($pdo->getArticleData($_GET['article'])[0]['imageArticle'] != "")
                         {
-                            unlink("./Tools/articles/".$pdo->getArticleData($_GET['article'])[0]['imageArticle']);
+                            unlink("../FO/Tools/articles/".$pdo->getArticleData($_GET['article'])[0]['imageArticle']);
                         }
-                        $content_dir = './Tools/articles/';
+                        $content_dir = '../FO/Tools/articles/';
                         $tmp_file = $image['tmp_name'];
                         $type_file = $image['type'];
                         if( !strstr($type_file, 'jpg') && !strstr($type_file, 'jpeg') && !strstr($type_file, 'bmp') && !strstr($type_file, 'gif') && !strstr($type_file, 'png')){
@@ -258,7 +258,7 @@
                 die("<h1>L'article a éditer n'a pas été spécifié.</h1>");
             }
             $article = $pdo->getArticleData($_GET['article']);          
-            unlink("./Tools/articles/".$pdo->getArticleData($_GET['article'])[0]['imageArticle']);
+            unlink("../FO/Tools/articles/".$pdo->getArticleData($_GET['article'])[0]['imageArticle']);
             $pdo->removeArticle($_GET['article']);
 
             header('Location:?case=BO_Articles&action=view&view='.$_GET['view']);

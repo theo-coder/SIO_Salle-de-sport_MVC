@@ -46,7 +46,7 @@ class viewArticles implements viewsComponent_interface {
                         $str.='
                         <div class="col-lg-6">
                         <div class="card mb-4" style="width: 100%;">
-                            <img src="./Tools/articles/'.$article['imageArticle'].'" style="max-height: 180px; object-fit: cover;" class="card-img-top">
+                            <img src="../FO/Tools/articles/'.$article['imageArticle'].'" style="max-height: 180px; object-fit: cover;" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">'.$article['titre'].'</h5>
                                 <p class="card-text">'.$article['texteHtml'].'</p>
