@@ -44,6 +44,9 @@ switch($case){
 		include_once("./Views/viewHome.php");
 		$view->body = new viewHome();
 		break;
+	case "FO_Abonnement":
+		include "./Controllers/Abonnement_controller.php";
+		break;
 	case "FO_Account":
 		include "./Controllers/Account_controller.php";
 		break;
