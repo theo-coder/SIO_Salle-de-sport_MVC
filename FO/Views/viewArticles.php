@@ -48,11 +48,7 @@ class viewArticles implements viewsComponent_interface {
 
                     
                 $str.='</div><br/>
-                </div>
-                
-                
-                
-                ';
+                </div>';
         }
         if($this->message != null){
             $str=$str.'<div class="error"><h2>'.$this->message.'</h2></div>';

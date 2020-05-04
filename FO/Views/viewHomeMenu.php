@@ -73,13 +73,13 @@ class viewHomeMenu implements viewsComponent_interface {
 						</li>';
 						}
 						$str.='<li class="nav-item">
-							<a class="nav-link" href="index.php?case=FO_Articles&action=view&view=1">Articles</a>
+							<a class="nav-link" href="index.php?case=FO_Articles&action=view">Articles</a>
 						</li>
 						';
 
 						if(Session::isLogged()){
 							$str.='<li class="nav-item">
-							<a class="nav-link" href="index.php?case=BO_Abonnements&action=view">Abonnements</a>
+							<a class="nav-link" href="index.php?case=FO_Abonnement&action=subscribe">Abonnements</a>
 							</li>';
 						}
 						
@@ -128,7 +128,7 @@ class viewHomeMenu implements viewsComponent_interface {
 											<a href="#" id="email">'.$this->email.'</a>
 											<form method="post" enctype="multipart/form-data" id="email-input"><input type="text" name="emailChanged" placeholder="'.$this->email.'"><button name="emailChange" type="submit" id="email-button">Ok</button><br/></form>
 											<div id="abonnement-link">
-												<a href="#">Mon abonnement</a>
+												<a href="index.php?case=FO_Abonnement&action=subscribe">Mon abonnement</a>
 											</div>
 											<div id="newsletter">
 												<span id="newsletter-label">Inscription à la newsletter</span>

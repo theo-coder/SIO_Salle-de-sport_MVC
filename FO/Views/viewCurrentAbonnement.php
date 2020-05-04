@@ -46,7 +46,7 @@ class viewCurrentAbonnement implements viewsComponent_interface {
                             au plus bas prix !";
                             break;
                         default:
-                            echo("Erreur");
+                            header('Location:./index.php?case=FO_Abonnement&');
                             break;
                     }
                     $str.="
