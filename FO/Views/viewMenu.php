@@ -36,9 +36,11 @@ class viewMenu implements viewsComponent_interface {
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?case=FO_Articles&action=view">Articles</a>
                     </li>
-					<li class="nav-item">
-						<a class="nav-link" href="index.php?case=FO_Abonnement&action=subscribe">Abonnement</a>
-					</li>
+                    <?php if(Session::isLogged()){ ?>
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.php?case=FO_Abonnement&action=subscribe">Abonnement</a>
+                        </li>
+                    <?php } ?>
                 </ul>
             </div>
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
@@ -52,8 +54,7 @@ class viewMenu implements viewsComponent_interface {
                                 <a class="nav-link" href="index.php?case=FO_Account&action=view">Mon compte</a>
                             </li>
 
-                            <?php
-                            break;
+                            <?php break;
                         default:
                         ?>
                             <li class="nav-item">
