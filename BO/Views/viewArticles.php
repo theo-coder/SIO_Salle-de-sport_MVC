@@ -50,8 +50,8 @@ class viewArticles implements viewsComponent_interface {
                             <div class="card-body">
                                 <h5 class="card-title">'.$article['titre'].'</h5>
                                 <p class="card-text">'.$article['texteHtml'].'</p>
-                                <a href="#" class="btn btn-primary">Modifier</a>
-                                <a href="#" class="btn btn-danger">Supprimer</a>
+                                <a href="index.php?case=BO_Articles&action=edit&article='.$article['idArticle'].'" class="btn btn-primary">Modifier</a>
+                                <a onclick="return(confirm(\'Etes-vous sûr(e) ?\'));" href="index.php?case=BO_Articles&action=remove&article='.$article['idArticle'].'" class="btn btn-danger">Supprimer</a>
                             </div>
                         </div>
                         </div>
@@ -60,8 +60,33 @@ class viewArticles implements viewsComponent_interface {
 
                     
                 $str.='</div><br/>
-                <a class="btn btn-link" href="?case=BO_Articles&action=add" name="addCateg">Nouvel article</a>
-                </div>';
+                <ul class="nav justify-content-center navCateg">
+                    <li class="nav-item navCategItem">
+                        <a class="btn btn-link" href="?case=BO_Articles&action=add">Nouvel article</a>
+                    </li>
+                    <li class="nav-item navCategItem">
+                        <a class="btn btn-link" onclick="return editCategory()" href="#">Renommer la rubrique</a>
+                    </li>
+                    <li class="nav-item navCategItem">
+                        <a class="btn btn-link" onclick="return(confirm(\'Etes-vous sûr(e) ?\nCela va supprimer tous les articles de la rubrique!!!\'));" href="index.php?case=BO_Articles&action=view&view='.$_GET['view'].'&remove">Supprimer la rubrique</a>
+                    </li>
+                </ul>
+                </div>
+                <script>
+                function editCategory() {
+                var txt;
+                var catName = prompt("Entrez le nom de la catégorie :", "'.$this->categorie[0]['titre'].'");
+                if (catName == null || catName == "") {
+                    return false;
+                } else {
+                    location.href = "index.php?case=BO_Articles&action=view&view='.$_GET['view'].'&rename="+ catName;
+                }
+                }
+                </script>
+                
+                
+                
+                ';
         }
         if($this->message != null){
             $str=$str.'<div class="error"><h2>'.$this->message.'</h2></div>';

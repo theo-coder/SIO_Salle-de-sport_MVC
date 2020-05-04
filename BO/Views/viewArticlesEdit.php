@@ -15,18 +15,22 @@ class viewArticlesEdit implements viewsComponent_interface {
         $str="
         <div class='back'></div>
                 <div class='accountContainArticles'>
-                    <h2 class='accountTitle'>Ajout d'un article</h2>
+                    <h2 class='accountTitle'>Modification d'un article</h2>
                     <form method='POST' enctype='multipart/form-data' class='accountForm needs-validation' novalidate>
                         <label for='pseudoInput' class='accountLabel accountLabelPseudo'>Titre :</label>
                         <input type='text' value='".$this->article[0]['titre']."' name='title' id='pseudoInput' class='accountInputPseudo accountInput form-control' required>
                         <label for='emailInput' class='accountLabel accountLabelEmail'>Image :</label>
                         <input type='file' accept='image/jpeg,image/tiff,image/gif,image/x-png' name='picture'>
                         <label for='newsletterInput' class='accountLabel accountLabelNewsletter'>Catégorie :</label>
-                        <select name='category' id='newsletterInput' class='accountInputNewsletter accountInput form-control' required>
-                            <option value='' selected>Choisissez une catégorie...</option>";
+                        <select name='category' id='newsletterInput' class='accountInputNewsletter accountInput form-control' required>";
                             foreach($this->categorie as $categorie)
                             {
-                                $str .= "<option value='".$categorie['idCategorie']."'>".$categorie['titre']."</option>";
+                                if($this->article[0]['idCategorie'] == $categorie['idCategorie'])
+                                {
+                                    $str .= "<option selected value='".$categorie['idCategorie']."'>".$categorie['titre']."</option>";
+                                }else{
+                                    $str .= "<option value='".$categorie['idCategorie']."'>".$categorie['titre']."</option>";
+                                }
 
                             }
                       
