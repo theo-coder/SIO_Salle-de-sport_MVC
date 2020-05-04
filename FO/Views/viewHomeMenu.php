@@ -73,11 +73,17 @@ class viewHomeMenu implements viewsComponent_interface {
 						</li>';
 						}
 						$str.='<li class="nav-item">
-							<a class="nav-link" href="index.php?case=FO_Articles&action=view">Articles</a>
+							<a class="nav-link" href="index.php?case=FO_Articles&action=view&view=1">Articles</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.php?case=FO_Abonnement&action=subscribe">Abonnement</a>
-						</li>
+						';
+
+						if(Session::isLogged()){
+							$str.='<li class="nav-item">
+							<a class="nav-link" href="index.php?case=BO_Abonnements&action=view">Abonnements</a>
+							</li>';
+						}
+						
+						$str.='
 					</ul>
 				</div>
 			';

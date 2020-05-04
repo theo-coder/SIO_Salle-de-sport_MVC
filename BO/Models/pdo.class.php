@@ -248,6 +248,24 @@ class PDO_SDS {
 		$res = $req->fetchAll(PDO::FETCH_ASSOC);
         return $res;
     }
+    function listeNoAbo(){
+        $req =  self::$pdo->prepare('SELECT u.* FROM UTILISATEUR u NATURAL LEFT JOIN ABONNEMENT a WHERE a.idUser IS NULL');
+        $res = $req->execute();
+		$res = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $res;
+    }
+    function listeValid(){
+        $req =  self::$pdo->prepare('SELECT * FROM `ABONNEMENT` NATURAL JOIN UTILISATEUR');
+        $res = $req->execute();
+		$res = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $res;
+    }
+    function listeDone(){
+        $req =  self::$pdo->prepare('SELECT * FROM `ABONNEMENT` NATURAL JOIN UTILISATEUR');
+        $res = $req->execute();
+		$res = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $res;
+    }
 
     function editArticle($idArticle, $titre,$image,$texte,$user,$categ){
         $req =  self::$pdo->prepare('UPDATE `ARTICLE` SET `dateArticle`=Date(Now()), `titre`=:titre, `imageArticle`=:image, `texteHtml`=:texte, `idUtilisateur`=:user, `idCategorie`=:categ WHERE idArticle=:idArticle');

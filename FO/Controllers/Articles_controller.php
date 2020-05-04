@@ -17,7 +17,7 @@
             if(isset($_REQUEST["categSubmit"])){
                 if($_REQUEST["categName"]){
                     $pdo->addCateg($_REQUEST["categName"]);
-                    header("Location:index.php?case=FO_Articles&action=view");
+                    header("Location:index.php?case=FO_Articles&action=view&view=1");
                 } else {
                     $view->body->setMessage("Veuillez rentrer un nom de catégorie");
                 }

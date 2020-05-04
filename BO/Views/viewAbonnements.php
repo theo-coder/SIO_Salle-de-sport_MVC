@@ -13,6 +13,21 @@ class viewAbonnements implements viewsComponent_interface {
 	public function insideHtml(){
         $str="<div class='back'></div>
         <div class='accountContain'>
+        <ul class='nav justify-content-center navCateg'>
+
+                <li class='nav-item navCategItem'>
+                    <a href='?case=BO_Abonnements&action=view&view=all' class='btn btn-primary'>Tous les abonnés</a>
+                </li>
+                <li class='nav-item navCategItem'>
+                    <a href='?case=BO_Abonnements&action=view&view=noabo' class='btn btn-primary'>Inscrits sans abonnements</a>
+                </li>
+                <li class='nav-item navCategItem'>
+                    <a href='?case=BO_Abonnements&action=view&view=valid' class='btn btn-primary'>Abonnements valide</a>
+                </li>
+                <li class='nav-item navCategItem'>
+                    <a href='?case=BO_Abonnements&action=view&view=done' class='btn btn-primary'>Abonnements finis</a>
+                </li>
+        </ul>
             <table class='table'>
                 <thead>
                     <tr>
