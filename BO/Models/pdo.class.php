@@ -243,7 +243,7 @@ class PDO_SDS {
         return $res;
     }
     function getAllAbonnements(){
-        $req =  self::$pdo->prepare('SELECT * FROM `ABONNEMENT`');
+        $req =  self::$pdo->prepare('SELECT * FROM `ABONNEMENT` NATURAL JOIN UTILISATEUR');
         $res = $req->execute();
 		$res = $req->fetchAll(PDO::FETCH_ASSOC);
         return $res;
