@@ -39,15 +39,17 @@ class viewArticles implements viewsComponent_interface {
                         </div>
                     ';
                 } else {
-                    $str .= '<div class="row">';
+                    $str .= '<div class="row mx-4">';
                     foreach($this->articles as $article){
+                        if($article['imageArticle'] == "")
+                            $article['imageArticle'] = "placeholder.png";
                         $str.='
                         <div class="col-lg-6">
-                        <div class="card" style="width: 100%;">
+                        <div class="card mb-4" style="width: 100%;">
                             <img src="./Tools/articles/'.$article['imageArticle'].'" style="max-height: 180px; object-fit: cover;" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">'.$article['titre'].'</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card\'s content.</p>
+                                <p class="card-text">'.$article['texteHtml'].'</p>
                                 <a href="#" class="btn btn-primary">Modifier</a>
                                 <a href="#" class="btn btn-danger">Supprimer</a>
                             </div>
@@ -55,25 +57,6 @@ class viewArticles implements viewsComponent_interface {
                         </div>
                         ';
                     }
-
-                    // <tr>
-                    // <th scope="row">1</th>
-                    // <td>Mark</td>
-                    // <td>Otto</td>
-                    // <td>@mdo</td>
-                    // </tr>
-                    // <tr>
-                    // <th scope="row">2</th>
-                    // <td>Jacob</td>
-                    // <td>Thornton</td>
-                    // <td>@fat</td>
-                    // </tr>
-                    // <tr>
-                    // <th scope="row">3</th>
-                    // <td>Larry</td>
-                    // <td>the Bird</td>
-                    // <td>@twitter</td>
-                    // </tr>
 
                     
                 $str.='</div><br/>
