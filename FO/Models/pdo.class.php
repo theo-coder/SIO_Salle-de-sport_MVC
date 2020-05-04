@@ -180,13 +180,55 @@ class PDO_SDS {
         $res = $req->execute();
         return $res;
     }
+    function deleteAbonnement($id){
+        $req =  self::$pdo->prepare('DELETE FROM `ABONNEMENT` WHERE idUtilisateur = :id');
+        $req->bindParam('id', $id);
+        $res = $req->execute();
+        return $res;
+    }
     function getGymComments(){
         $req =  self::$pdo->prepare('SELECT * FROM `COMMENTAIRE_SALLE`;');
         $res = $req->execute();
         $res = $req->fetchAll(PDO::FETCH_ASSOC);
         return $res;
     }
-
+    function getAbonnement(){
+        $req =  self::$pdo->prepare('SELECT * FROM `ABONNEMENT`;');
+        $res = $req->execute();
+        $res = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $res;
+    }
+    function getUserAbonnement($id){
+        $req =  self::$pdo->prepare('SELECT typeAbonnement FROM `ABONNEMENT` where `idUtilisateur` =:id;');
+        $req->bindParam('id', $id);
+        $res = $req->execute();
+		$res = $req->fetch();
+        return $res;
+    }
+    function getUserAbonnementDate($id){
+        $req =  self::$pdo->prepare('SELECT dateFin FROM `ABONNEMENT` where `idUtilisateur` =:id;');
+        $req->bindParam('id', $id);
+        $res = $req->execute();
+		$res = $req->fetch();
+        return $res;
+    }
+    function checkAbonnement($id){
+        $req =  self::$pdo->prepare('SELECT * FROM `ABONNEMENT` WHERE `idUtilisateur` = :id;');
+        $req->bindParam(":id",$id);
+        $res = $req->execute();
+        $res = $req->fetch();
+        return ((empty($res)) ? false : true);
+    }
+    
+    function addAbonnement($id, $paiement, $dateFin, $type){
+        $req =  self::$pdo->prepare('INSERT INTO `ABONNEMENT` (idUtilisateur, etatPaiement, dateDebut, dateFin, typeAbonnement) VALUES (:id, :paiement, Date(Now()), :dateFin, :type);');
+        $req->bindParam('paiement', $paiement);
+        $req->bindParam('dateFin', $dateFin); //Now()+INTERVAL 3 MONTH
+        $req->bindParam('type', $type); 
+        $req->bindParam('id', $id); 
+        $res = $req->execute();
+        return $res;
+    }
     function updateEmail($email, $id){
         $req =  self::$pdo->prepare('UPDATE `UTILISATEUR` SET `mailUtilisateur`=:email WHERE `idUtilisateur`=:id');
         $req->bindParam('id', $id);

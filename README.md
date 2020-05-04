@@ -57,15 +57,15 @@
 
 ### BO 5
 
-- [ ] Un utilisateur peut ajouter/modifier/supprimer des rubriques (premier niveau de menu) au FO. Une rubrique à un titre.
-- [ ] Un utilisateur peut ajouter/modifier/supprimer des articles au FO (sous menu du FO) et les rédiger/modifier. Un article a un titre, un corps de texte et une image de fond. (Interface Wysiwig)
+- [x] Un utilisateur peut ajouter/modifier/supprimer des rubriques (premier niveau de menu) au FO. Une rubrique à un titre.
+- [x] Un utilisateur peut ajouter/modifier/supprimer des articles au FO (sous menu du FO) et les rédiger/modifier. Un article a un titre, un corps de texte et une image de fond. (Interface Wysiwig)
 
 ## Etape 6 : Gérer un abonnement
 
 ### FO 6
 
-- [ ] Les utilisateurs connectés peuvent s'inscrire à la salle et consulter si son inscription est valide (\<\<paiement reçu\>\> ou \<\<en attente de paiement\>\>)
-- [ ] Les utilisateurs peuvent suspendre leur abonnement
+- [x] Les utilisateurs connectés peuvent s'inscrire à la salle et consulter si son inscription est valide (\<\<paiement reçu\>\> ou \<\<en attente de paiement\>\>)
+- [x] Les utilisateurs peuvent suspendre leur abonnement
 
 ### BO 6
 

@@ -30,9 +30,19 @@ class viewMenu implements viewsComponent_interface {
 								<a class="dropdown-item active" href="index.php?case=BO_Newsletter&action=unsubscribe">Désinscription</a>
 							</div>
 						</li>
-					<?php } ?>
+					<?php } 
 
-
+						if(Session::getUserType()[0]!=1){?>
+							<li class="nav-item">
+								<a class="nav-link" href="index.php?case=BO_Users&action=view">Utilisateurs</a>
+							</li>
+						<?php } ?>
+						<li class="nav-item">
+							<a class="nav-link" href="index.php?case=BO_Newsletter&action=view">Newsletter</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.php?case=BO_Commentaires&action=view">Commentaires</a>
+						</li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?case=BO_Articles&action=view&view=1">Articles</a>
                     </li>
@@ -46,7 +56,7 @@ class viewMenu implements viewsComponent_interface {
                             ?>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Mon compte</a>
+                                <a class="nav-link" href="../FO/index.php?case=FO_Account&action=view">Mon compte</a>
                             </li>
 
                             <?php
