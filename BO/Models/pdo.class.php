@@ -216,6 +216,22 @@ class PDO_SDS {
         $res = $req->execute();
         return $res;
     }
+
+    function editCateg($id, $titre){
+        $req =  self::$pdo->prepare('UPDATE `CATEGORIE` SET `titre`=:titre WHERE idCategorie=:idCategorie;');
+        $req->bindParam('titre', $titre);
+        $req->bindParam('idCategorie', $id);
+        $res = $req->execute();
+        return $res;
+    }
+
+    function removeCateg($id){
+        $req =  self::$pdo->prepare('DELETE FROM `CATEGORIE` WHERE idCategorie=:idCategorie;');
+        $req->bindParam('idCategorie', $id);
+        $res = $req->execute();
+        return $res;
+    }
+
     function addArticle($titre,$image,$texte,$user,$categ){
         $req =  self::$pdo->prepare('INSERT INTO `ARTICLE` (dateArticle, titre, imageArticle, texteHtml, idUtilisateur, idCategorie) VALUES (Date(Now()), :titre, :image, :texte, :user, :categ);');
         $req->bindParam('titre', $titre);
@@ -226,13 +242,15 @@ class PDO_SDS {
         $res = $req->execute();
         return $res;
     }
-    function editArticle($titre,$image,$texte,$user,$categ){
-        $req =  self::$pdo->prepare('UPDATE `ARTICLE` SET `dateArticle`=Date(Now()), `titre`=:titre, `imageArticle`=:image, `texteHtml`=:texte, `idUtilisateur`=:user, `idCategorie`=:categ;');
+    function editArticle($idArticle, $titre,$image,$texte,$user,$categ){
+        $req =  self::$pdo->prepare('UPDATE `ARTICLE` SET `dateArticle`=Date(Now()), `titre`=:titre, `imageArticle`=:image, `texteHtml`=:texte, `idUtilisateur`=:user, `idCategorie`=:categ WHERE idArticle=:idArticle');
         $req->bindParam('titre', $titre);
         $req->bindParam('image', $image);
         $req->bindParam('texte', $texte);
         $req->bindParam('user', $user);
         $req->bindParam('categ', $categ);
+        $req->bindParam('idArticle', $idArticle);
+
         $res = $req->execute();
         return $res;
     }
